@@ -1,36 +1,3 @@
-# Vue 尚品匯前台
-
-實作記錄，方便之後查看，持續構建中
-
-# webpack版本
-
-採用4版本
-
-# vue-cli版本
-
-採用4版本
-
-# 初始化項目
-
-```bash
-vue create 項目名
-```
-
-# vue-cli版本
-
-版本4跟版本5在配置上有不同，若是舊的專案需注意
-
-# 安裝less
-
-注意版本號， less-loader採用5版本
-
-```bash
-npm i --save less less-loader@5
-```
-
-# 引入reset.css
-
-```css
 @import "./iconfont.css";
  
 /* 清除内外边距 */
@@ -108,24 +75,3 @@ a:link:hover{
     clear: both;
     visibility: hidden;
 }
-```
-
-# 路由
-
-安裝vue-router 版本3.5.3
-
-```bash
-npm i --save vue-router@3.5.3
-```
-
-
-# 測試接口
-
-最新接口位址
-
-http://gmall-h5-api.atguigu.cn/
-
-http://gmall-h5-api.atguigu.cn/api/product/getBaseCategoryList
-
-![image](./images/Xnip2022-07-25_21-03-27.jpg)
-
