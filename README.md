@@ -2,6 +2,8 @@
 
 實作記錄，方便之後查看，持續構建中
 
+![image](./images/Xnip2022-07-26_11-15-17.jpg)
+
 # webpack版本
 
 採用4版本
@@ -129,3 +131,8 @@ http://gmall-h5-api.atguigu.cn/api/product/getBaseCategoryList
 
 ![image](./images/Xnip2022-07-25_21-03-27.jpg)
 
+# 安裝axios
+
+```bash
+npm i --save axios
+```
