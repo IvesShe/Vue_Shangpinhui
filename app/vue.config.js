@@ -13,4 +13,12 @@ module.exports = {
   //     .set('@components', resolve('src/components'))
   //     .set('@examComponents', resolve('src/components/exam'))
   // }
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://gmall-h5-api.atguigu.cn',
+        // pathRewrite: { '^/api': '' },
+      },
+    },
+  },
 }

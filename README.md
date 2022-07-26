@@ -136,3 +136,47 @@ http://gmall-h5-api.atguigu.cn/api/product/getBaseCategoryList
 ```bash
 npm i --save axios
 ```
+
+# 配置代理服務器
+
+https://webpack.docschina.org/configuration/dev-server/
+
+```js
+module.exports = {
+  //...
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        pathRewrite: { '^/api': '' },
+      },
+    },
+  },
+};
+```
+
+# 安裝nprogress進度條
+
+```bash
+npm i --save nprogress
+```
+
+```js
+import nprogress from 'nprogress'
+import "nprogress/nprogress.css"
+
+nprogress.start()
+nprogress.done()
+```
+
+# 安裝vuex
+
+注意版本
+
+```bash
+npm i --save vuex@3.6.2
+```
+
+使用模塊式
+
+https://vuex.vuejs.org/zh/guide/modules.html
