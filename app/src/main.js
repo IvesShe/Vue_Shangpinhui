@@ -3,9 +3,9 @@ import App from './App.vue'
 import router from '@/router'
 import store from '@/store'
 
-import TypeNav from '@/pages/Home/TypeNav'
-import { reqCategoryList } from '@/api'
-reqCategoryList()
+import TypeNav from '@/components/TypeNav'
+// import { reqCategoryList } from '@/api'
+// reqCategoryList()
 // 第一個參數: 全局組件的名字、第二個參數: 哪一個組件
 Vue.component(TypeNav.name, TypeNav)
 

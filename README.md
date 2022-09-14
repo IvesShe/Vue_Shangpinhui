@@ -1,9 +1,83 @@
-# Vue 尚品匯前台
-
-實作記錄，方便之後查看，持續構建中
+# Vue 尚品匯 電商購物平台
 
 ![image](./images/Xnip2022-07-26_11-15-17.jpg)
 
+# 使用技術
+
+- Vue2
+- vue-router
+- element-ui
+- axios
+- less
+- mockjs
+- nprogress
+- qrcode
+- swiper
+- vee-validate
+- vue-lazyload
+- vuex
+# 頁面展示
+
+首頁
+
+![image](./images/Xnip2022-09-14_15-51-44.jpg)
+
+註冊頁
+
+![image](./images/Xnip2022-09-14_15-51-53.jpg)
+
+登入頁
+
+![image](./images/Xnip2022-09-14_15-52-01.jpg)
+
+商品列表頁
+
+![image](./images/Xnip2022-09-14_15-52-22.jpg)
+
+商品詳情頁
+
+![image](./images/Xnip2022-09-14_15-53-09.jpg)
+
+加入購物車
+
+![image](./images/Xnip2022-09-14_15-53-21.jpg)
+
+購物車
+
+![image](./images/Xnip2022-09-14_15-53-30.jpg)
+
+結算頁(上)
+
+![image](./images/Xnip2022-09-14_15-53-47.jpg)
+
+結算頁(下)
+
+![image](./images/Xnip2022-09-14_15-53-55.jpg)
+
+支付頁
+
+![image](./images/Xnip2022-09-14_15-54-07.jpg)
+
+支付頁-QRCODE彈窗
+
+![image](./images/Xnip2022-09-14_15-54-14.jpg) 
+
+支付成功
+
+![image](./images/Xnip2022-09-14_15-54-20.jpg) 
+
+我的訂單
+
+![image](./images/Xnip2022-09-14_15-54-30.jpg) 
+
+
+團購訂單
+
+![image](./images/Xnip2022-09-14_15-54-37.jpg) 
+
+搜尋頁
+
+![image](./images/Xnip2022-09-14_15-55-35.jpg) 
 # webpack版本
 
 採用4版本
@@ -180,3 +254,147 @@ npm i --save vuex@3.6.2
 使用模塊式
 
 https://vuex.vuejs.org/zh/guide/modules.html
+
+# lodash
+
+中文官網
+
+https://www.lodashjs.com/docs/lodash.debounce
+
+官網
+
+https://lodash.com/
+
+# mock.js
+
+官網
+
+http://mockjs.com/
+
+
+```bash
+npm i mockjs
+```
+
+1. 在項目中src下創建mock文件夾
+2. 准備json數據(mock文件夾下創建相應的json文件)，記得格式化，別留奇怪的空格
+3. 把mock數據需要的圖片放置到public文件夾中
+4. 創建mockServer.js通過mockjs插件實現模擬數據
+5. mockServer.js在入口文件引入
+
+# swiper
+
+官網
+
+https://swiper.com.cn/
+
+使用版本5.4.5
+
+1. 引包
+2. 頁面結構務必要有
+3. new Swiper實例(輪播圖添加動態效果)
+
+
+```bash
+npm i swiper@5
+```
+
+
+# 阿里圖標
+
+https://www.iconfont.cn/
+
+
+# Element UI
+
+官網
+
+https://element.eleme.io/#/zh-CN/component/installation
+
+安裝
+
+```bash
+npm i element-ui -S
+```
+
+按需引入
+
+https://element.eleme.io/#/zh-CN/component/quickstart
+
+```bash
+npm install babel-plugin-component -D
+```
+
+修改babel.config.js
+
+```js
+"plugins": [
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
+  ]
+```
+
+# 二維碼生成
+
+https://www.npmjs.com/package/qrcode
+
+安裝
+
+```bash
+npm install --save qrcode
+```
+
+使用
+
+```js
+import QRCode from 'qrcode'
+
+// With promises
+QRCode.toDataURL('I am a pony!')
+  .then(url => {
+    console.log(url)
+  })
+  .catch(err => {
+    console.error(err)
+  })
+
+// With async/await
+const generateQR = async text => {
+  try {
+    console.log(await QRCode.toDataURL(text))
+  } catch (err) {
+    console.error(err)
+  }
+}
+```
+
+# 圖片懶加載-vue-lazyload
+
+https://www.npmjs.com/package/vue-lazyload
+
+注意版本號，版本不對會報錯
+
+```bash
+npm i vue-lazyload@1.1.3 -S
+```
+
+# 表單驗證-vee-validate
+
+https://www.npmjs.com/package/vee-validate
+
+```bash
+npm install vee-validate@2 --save
+```
+
+# 打包
+
+不需要map文件時在vue.config.js下參數
+
+```json
+productionSourceMap:false
+```
